@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+  color: $color-gray;
+  font-family: $font-main;
+  font-size: $font-size;
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  font-family: $font-header;
+  font-weight: 300;
+  line-height: 1.2em;
+
+  @include lg-min {
+    font-size: 3.75rem;
+  }
+
+  @include lg-md {
+    font-size: 2.5rem;
+  }
+
+  @include md {
+    font-size: 1.875rem;
+  }
+}
+
+h2 {
+}
+
+h3 {
+}
+
+a {
+  text-decoration: none;
+  color: $color-light;
+}
+
+.btn {
+  display: block;
+  height: 60px;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 1.125rem;
+  transition: background-color 0.5s;
+
+  min-width: 250px;
+  border: 2px solid $color-light;
+  background-color: rgba($color-light, 0.1);
+
+  @include sm {
+    padding: 11px 36px;
+    height: auto;
+  }
+
+  &:hover {
+    background-color: $color-accent;
+  }
+}
+
+

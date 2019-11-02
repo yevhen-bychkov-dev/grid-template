@@ -1,0 +1,36 @@
+.header-content {
+  position: relative;
+
+  &__container {
+    max-width: 1340px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  &__title {
+    letter-spacing: 0.08em;
+    text-align: center;
+
+    @include lg-min {
+      margin: 0 0 53px;
+    }
+
+    @include lg {
+      margin: 0 0 43px;
+    }
+
+    @include sm {
+      font-size: 1.875rem;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: center;
+
+    .btn:first-of-type {
+      margin-right: 20px;
+    }
+  }
+}

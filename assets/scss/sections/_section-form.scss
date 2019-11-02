@@ -1,0 +1,137 @@
+.form {
+    background-color: $color-main;
+
+    &__container {
+        max-width: 1340px;
+        margin: 0 auto;
+    }
+}
+
+.unnecessary-fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form-inputs {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "nm eml btn";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 120px;
+    justify-content: center;
+    align-items: center;
+    grid-gap: $gap;
+
+    @include md-sm {
+        grid-template-areas: 
+         "nm nm"
+         "eml btn";
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 80px);
+        grid-gap: $gap;
+    }
+
+    @include sm {
+        grid-template-areas: 
+         "nm"
+         "eml"
+         "btn";
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 60px 80px;
+        grid-gap: $gap;
+    }
+
+
+    &__name{
+        grid-area: nm;
+        padding-left: 20px;
+        
+        @include md-sm {
+            padding: 0 20px;
+            align-self: end;   
+        }
+
+        @include sm {
+            padding: 0 20px;
+            align-self: end; 
+        }
+    }
+
+    &__nm {
+        background-color: rgba($color-light, 0.05);
+        @include frm-btn;
+
+        &::placeholder {
+            @include plch
+        }
+
+        &:hover,
+        &:focus {
+            @include plch-hvr;
+
+            &::placeholder {
+                color: lighten($color-gray, 15%)
+            }
+        }
+    }
+
+    &__email {
+        grid-area: eml;
+
+        @include md-sm {
+            padding-left: 20px;
+            align-self: start; 
+        }
+
+        @include sm {
+            padding: 0 20px;
+            align-self: center; 
+        }
+    }
+
+    &__eml {
+        @include frm-btn;
+        background-color: rgba($color-light, 0.05);
+        
+        &::placeholder {
+            @include plch
+        }
+
+        &:hover,
+        &:focus {
+            @include plch-hvr;
+
+            &::placeholder {
+                color: lighten($color-gray, 15%)
+            }
+        }
+    }
+
+    &__button {
+        grid-area: btn;
+        padding-right: 20px;
+
+        @include md-sm {
+            align-self: start; 
+        }
+
+        @include sm {
+            padding: 0 20px;
+            align-self: start; 
+        }
+    }
+
+    &__btn {
+        background-color: rgba($color-light, 0.15);
+        @include frm-btn;
+        border-bottom: 2px solid rgba($color-light, 0.25);
+
+        &:hover {
+            background-color: $color-accent;
+            border: 2px solid $color-light;
+        }
+    }
+
+    
+}
