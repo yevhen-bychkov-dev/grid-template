@@ -702,8 +702,12 @@ a {
   grid-template-areas: 'a1 a1 a2 a3' 'a4 a5 a5 a6' 'a7 a8 a9 a6';
 }
 
+.skills__down {
+  text-align: center;
+}
+
 .skills__btn {
-  display: block;
+  display: inline-block;
   margin: 20px auto 40px;
   background-color: rgba(45, 54, 81, 0.8);
   border: 0;
@@ -1204,7 +1208,7 @@ a {
   padding: 19px 95px 19px 98px;
   border: 2px solid #2d3651;
   color: #ffffff;
-  background-color: #44596e;
+  background-color: rgba(45, 54, 81, 0.8);
   letter-spacing: 1.8px;
   font-weight: 400;
   -webkit-transition: background-color 0.5s;
@@ -1220,7 +1224,8 @@ a {
   display: grid;
   grid-template-areas: "ar1 ar1 ar2 ar3"  "ar4 ar5 ar6 ar6";
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 550px);
+  grid-template-rows: repeat(2, minmax(550px, -webkit-max-content));
+  grid-template-rows: repeat(2, minmax(550px, max-content));
   grid-gap: 20px;
 }
 
@@ -1229,7 +1234,7 @@ a {
   font-size: 1.125rem;
   font-weight: 700;
   color: #637588;
-  margin: 69px 0 17px;
+  margin: 45px 0 17px;
   -webkit-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
@@ -1451,7 +1456,8 @@ a {
   .post-items {
     grid-template-areas: "ar1 ar1 ar2" "ar3 ar4 ar4" "ar5 ar5 ar6";
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 550px);
+    grid-template-rows: repeat(3, minmax(550px, -webkit-max-content));
+    grid-template-rows: repeat(3, minmax(550px, max-content));
   }
 }
 
@@ -1522,7 +1528,8 @@ a {
   .post-items {
     grid-template-areas: "ar1 ar2" "ar3 ar4" "ar5 ar6";
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 550px);
+    grid-template-rows: repeat(3, minmax(550px, -webkit-max-content));
+    grid-template-rows: repeat(3, minmax(550px, max-content));
   }
 }
 
@@ -1613,7 +1620,8 @@ a {
   .post-items {
     grid-template-areas: "ar1" "ar2" "ar3" "ar4" "ar5" "ar6";
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 550px);
+    grid-template-rows: repeat(6, minmax(550px, -webkit-max-content));
+    grid-template-rows: repeat(6, minmax(550px, max-content));
     text-align: center;
   }
 }

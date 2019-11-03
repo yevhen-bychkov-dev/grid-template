@@ -51,8 +51,12 @@
       }
   }
 
+  &__down {
+    text-align: center;
+  }
+
   &__btn {
-    display: block;
+    display: inline-block;
     margin: $gap auto $gap*2;
     background-color: rgba($color-main, 0.8);
     border: 0;
