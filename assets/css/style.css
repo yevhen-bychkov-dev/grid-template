@@ -711,7 +711,8 @@ a {
   margin: 20px auto 40px;
   background-color: rgba(45, 54, 81, 0.8);
   border: 0;
-  padding: 20px 98px;
+  padding: 18px 96px;
+  border: 2px solid #2d3651;
   -webkit-transition: background-color 0.5s;
   -o-transition: background-color 0.5s;
   transition: background-color 0.5s;
@@ -719,8 +720,6 @@ a {
 
 .skills__btn:hover {
   background-color: #d66926;
-  padding: 18px 96px;
-  border: 2px solid #2d3651;
 }
 
 .skills__title {

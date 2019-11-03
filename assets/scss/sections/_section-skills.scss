@@ -60,7 +60,8 @@
     margin: $gap auto $gap*2;
     background-color: rgba($color-main, 0.8);
     border: 0;
-    padding: 20px 98px;
+    padding: 18px 96px;
+    border: 2px solid $color-main;
     transition: background-color 0.5s;
 
     @include sm {
@@ -70,8 +71,6 @@
     
     &:hover{
       background-color: $color-accent;
-      padding: 18px 96px;
-      border: 2px solid $color-main;
     }
   }
 
